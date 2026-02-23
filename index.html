@@ -1154,7 +1154,7 @@
                 <i class="fab fa-windows"></i>
                 <h3 data-i18n="windows">Windows</h3>
                 <div class="version">10 / 11 (64-bit)</div>
-                <a href="https://clck.ru/3RzbvU" class="btn" data-i18n="downloadBtn">Скачать .exe</a>
+                <a href="https://clck.ru/3RzbvU" class="btn" data-i18n="downloadBtn" rel="noreferrer">Скачать .exe</a>
             </div>
             <div class="download-card fade-up">
                 <i class="fab fa-linux"></i>
@@ -1165,7 +1165,7 @@
         </div>
         <div class="requirements fade-up">
             <p data-i18n="sysReq1"><strong>Системные требования (Windows):</strong> Windows 10/11 (64-bit), 2 ГБ ОЗУ, VLC.</p>
-            <p data-i18n="sysReq2">Прослушивание музыки доступно только с подпиской Яндекс Плюс (ну почти :P).
+            <p data-i18n="sysReq2">Прослушивание музыки доступно только с подпиской Яндекс Плюс (ну почти :P)
         </div>
     </div>
 </section>
@@ -1279,7 +1279,7 @@
                 downloadBtn: 'Скачать .exe',
                 inDev: 'В разработке',
                 sysReq1: '<strong>Системные требования (Windows):</strong> Windows 10/11 (64-bit), 2 ГБ ОЗУ, VLC.',
-                sysReq2: 'Прослушивание музыки доступно только с подпиской Яндекс Плюс (ну почти :P)',
+                sysReq2: 'Прослушивание музыки доступно только с подпиской Яндекс Плюс (ну почти)',
                 privacy: 'О проекте',
                 modalTitle: 'О проекте',
                 modalText1: 'Это <strong>неофициальная</strong> фанатская версия приложения для Яндекс.Музыки. Мы не связаны с Яндексом и не несём ответственности за использование программы.',
@@ -1408,13 +1408,13 @@
         fadeElements.forEach(el => observer.observe(el));
 
         // ===== ССЫЛКИ НА СКАЧИВАНИЕ (имитация скачивания) =====
-        document.getElementById('downloadWin').addEventListener('click', (e) => {
-            e.preventDefault();
-            const link = document.createElement('a');
-            link.href = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent('Это тестовый файл. Замените на реальный установщик.');
-            link.download = 'YandexMusicMini_Setup.exe';
-            link.click();
-        });
+document.getElementById('downloadWin').addEventListener('click', (e) => {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent('Это тестовый файл. Замените на реальный установщик.');
+    link.download = 'YandexMusicMini_Setup.exe';
+    link.click();
+});
 
         // ===== ПЛАВНЫЙ СКРОЛЛ К ЯКОРЯМ =====
         document.querySelectorAll('.nav-links a').forEach(link => {
