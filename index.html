@@ -1408,14 +1408,6 @@
 
         fadeElements.forEach(el => observer.observe(el));
 
-        // ===== ССЫЛКИ НА СКАЧИВАНИЕ (имитация скачивания) =====
-document.getElementById('downloadWin').addEventListener('click', (e) => {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent('Это тестовый файл. Замените на реальный установщик.');
-    link.download = 'YandexMusicMini_Setup.exe';
-    link.click();
-});
 
         // ===== ПЛАВНЫЙ СКРОЛЛ К ЯКОРЯМ =====
         document.querySelectorAll('.nav-links a').forEach(link => {
